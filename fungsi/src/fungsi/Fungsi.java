@@ -14,7 +14,7 @@ public class Fungsi {
         int luas = sisi * sisi;
         return luas;
     } 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //utama
         ucapSalam();
         
         ucapin("haloo");
@@ -28,12 +28,11 @@ public class Fungsi {
         int luas = luasKubus(s);
         
         System.out.println(luas);
-        }
+    }
         static int luasPersegii(int sisii){
         return sisii * sisii;
         }
         static int luasKubus(int sisii){
         return 6 * luasPersegii(sisii);
-        
         }
 }
