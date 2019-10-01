@@ -1,5 +1,7 @@
 package fungsi;
 import java.util.Scanner;
+    //@Gagassurya19
+    //LATIHAN 4
 public class method2 {
     public static void hitung(double a,double b){
         double oek = a / b;

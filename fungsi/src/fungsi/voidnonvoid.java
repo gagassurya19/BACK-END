@@ -1,6 +1,6 @@
 package fungsi;
 import java.util.Scanner;
-public class fungsi1 {
+public class voidnonvoid {
     //membuat fungsi untuk menghitung
     //luas segitiga
     //non void pasti ada tipe data [fungsinya untuk mengembalikan data] dan harus ada reutrn
@@ -18,13 +18,11 @@ public class fungsi1 {
     static void katakan(String print){
         System.out.print(print);
     }
-    
     static void TampilNama(String namaDepan, int a){
         for (int i = 0; i < a; i++) {
             System.out.println(namaDepan);
         }
-    }
-    
+    }   
     public static void main(String[] args) {        
         Scanner input = new Scanner(System.in);
         katakan("Program menghitung luas segitiga");

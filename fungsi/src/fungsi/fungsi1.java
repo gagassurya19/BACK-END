@@ -1,5 +1,7 @@
 package fungsi;
 import java.util.Scanner;
+    //@Gagassurya19
+    //TUGAS 
 public class fungsi1 {
     //membuat fungsi untuk menghitung
     //luas segitiga
