@@ -7,7 +7,6 @@ public class tabung {
     }
 
     tabung(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     public double volume(){
         return Math.PI*(r*r)*t;
