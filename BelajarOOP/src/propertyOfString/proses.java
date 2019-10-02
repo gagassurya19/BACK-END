@@ -4,60 +4,70 @@ public class proses {
     proses(String kt){
         kata = kt;
     }
-    public String balik(){
-        System.out.println("sebelum dibalik: "+kata);
-        int length = kata.length();
+    public void print(String p){
+        System.out.println(p);
+    }
+    public void balik(){
+        print("--------------------------------");
+        print("sebelum dibalik\t: "+kata);
         String end = "";
-        for (int i = length -1;  i >= 0; i--) {
+        for (int i = kata.length() -1;  i >= 0; i--) {
             end = end + kata.charAt(i);
         }
-        return end;
+        System.out.println("kalimat dibalik\t: "+end);
+        print("--------------------------------");
     }
-    public int vokal(){
-        int jumvokal = 0;
+    public void vokal(){
+        print("--------------------------------");
+        int vokal = 0;
         for (int i = 0; i < kata.length(); i++) {
-            if (kata.charAt(i)=='a' || kata.charAt(i)=='i' || kata.charAt(i)=='u' || kata.charAt(i)=='e' || kata.charAt(i)=='o') {
-                jumvokal++;
+            if (kata.charAt(i) == 'a' || kata.charAt(i) == 'i' || kata.charAt(i) == 'u' || kata.charAt(i) == 'e'
+                || kata.charAt(i)=='o') {
+                vokal++;
             }
         }
-        return jumvokal;
+        System.out.println("huruf vokal\t: "+vokal);
     }
-    public int konsonan(){
-        int jumkons = 0;
-        for (int i = 0; i < kata.length(); i++) {
-            if (kata.charAt(i) == 'b' || kata.charAt(i)  == 'c' || kata.charAt(i)  == 'd' || kata.charAt(i)  == 'f'
-                    || kata.charAt(i) == 'g' || kata.charAt(i) == 'h' || kata.charAt(i) == 'j' || kata.charAt(i) == 'k' || kata.charAt(i)  == 'l'
-                    || kata.charAt(i) == 'm' || kata.charAt(i) == 'n' || kata.charAt(i)  == 'p' || kata.charAt(i)  == 'q'
-                    || kata.charAt(i)  == 'r' || kata.charAt(i)  == 's' || kata.charAt(i)  == 't' || kata.charAt(i)  == 'v' || kata.charAt(i)  == 'w'
-                    || kata.charAt(i)  == 'x' || kata.charAt(i)  == 'y' || kata.charAt(i)  == 'z') {
-                jumkons++;
+    public void konsonan(){
+        int konsonan = 0;
+        for (int i = 0; i < kata.length(); i++){
+            if (kata.charAt(i) == 'b' || kata.charAt(i) == 'c' || kata.charAt(i) == 'd' || kata.charAt(i) == 'f'
+                || kata.charAt(i) == 'g' || kata.charAt(i) == 'h' || kata.charAt(i) == 'j' || kata.charAt(i) == 'k'
+                || kata.charAt(i) == 'l' || kata.charAt(i) == 'm' || kata.charAt(i) == 'n' || kata.charAt(i) == 'p'
+                || kata.charAt(i) == 'q' || kata.charAt(i) == 'r' || kata.charAt(i) == 's' || kata.charAt(i) == 't'
+                || kata.charAt(i) == 'v' || kata.charAt(i) == 'w' || kata.charAt(i) == 'x' || kata.charAt(i) == 'y'
+                || kata.charAt(i) == 'z'){
+            konsonan++;
             }
         }
-        return jumkons;
+        System.out.println("huruf konsonan\t: "+konsonan);
+        print("--------------------------------");
     }
-    public String upper(){
-        String end = "";
+    public void upper(){
+        print("--------------------------------");
+        System.out.print("Upper Case\t: "+kata.toUpperCase());
+        print("");
+    }
+    public void lower(){
+        System.out.print("Lower Case\t: "+kata.toLowerCase());
+        print("");
+    }
+    //masih bingung
+    public void striped(){   
+        String ganjil = "";
+        String genap = "";
+        String hasil;
         for (int i = 0; i < kata.length(); i++) {
-            end = kata.toUpperCase();
-        }
-        return end;
-    }
-    public String lower(){
-        String end = "";
-        for (int i = 0; i < kata.length(); i++) {
-            end = kata.toLowerCase();
-        }
-        return end;
-    }
-    public String striped(){
-        String length = kata;
-        for (int i = 0; i < length.length(); i++) {
-            if (i/2 == 0) {
-                System.out.println(kata.toUpperCase());
-            } else {
-                System.out.println(kata.toLowerCase());
+            for (int j = 0; j < kata.length(); j++) {
+                if (i%2 == 0) {
+                    genap = kata;
+                } else {
+                    ganjil = kata;
+                }
             }
         }
-        return length;
+        hasil = ganjil + genap;
+        System.out.print("Striped\t\t: hao");
+        print("\n--------------------------------");
     }
 }

@@ -2,17 +2,22 @@ package propertyOfString;
 import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
+        String balik = "y";
+        while(balik.equals("y")){
+            System.out.println("Sedang memuat...");
         Scanner input = new Scanner(System.in);
-        
         System.out.print("masukkan kalimat : ");
         String inputan = input.next();
-        //kata dibalik
         proses olah = new proses(inputan);
-        System.out.println("kalimat dibalik : "+olah.balik());
-        System.out.println("huruf vokal ada : "+olah.vokal());
-        System.out.println("huruf konsonan ada : "+olah.konsonan());
-        System.out.println("Upper Case : "+olah.upper());
-        System.out.println("Lower Case : "+olah.lower());
-        //System.out.println("Stripped : "+olah.striped());
+        olah.balik();
+        olah.vokal();
+        olah.konsonan();
+        olah.upper();
+        olah.lower();
+        olah.striped();
+            System.out.println("ingin mengulang ? (y/t)");
+            balik = input.next();
+        } 
+        System.out.println("Terimakasih :D");
     }
 }
