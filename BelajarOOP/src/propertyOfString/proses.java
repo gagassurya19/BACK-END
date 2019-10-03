@@ -52,22 +52,18 @@ public class proses {
         System.out.print("Lower Case\t: "+kata.toLowerCase());
         print("");
     }
-    //masih bingung
     public void striped(){   
-        String ganjil = "";
-        String genap = "";
-        String hasil;
         for (int i = 0; i < kata.length(); i++) {
-            for (int j = 0; j < kata.length(); j++) {
-                if (i%2 == 0) {
-                    genap = kata;
-                } else {
-                    ganjil = kata;
-                }
+            if (i%2 == 0) {
+                System.out.print(kata.toUpperCase().charAt(i)); 
+            } else {
+                System.out.print(kata.toLowerCase().charAt(i));
             }
         }
-        hasil = ganjil + genap;
-        System.out.print("Striped\t\t: hao");
-        print("\n--------------------------------");
+    }
+    public void printstrip(){
+        System.out.print("Striped\t\t: ");
+        striped();
+        System.out.println("\n--------------------------------");
     }
 }
