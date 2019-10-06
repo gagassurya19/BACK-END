@@ -1,21 +1,23 @@
 package konversi;
 public class oktal {
-    String konversi;
-    oktal(String o){
-        konversi = o;
-    }
+    String konversio;
+        oktal(String o){
+            konversio = o;
+        }
     oktal(){}
     //oktal -> des,hexa,biner
-    public Integer oktaldes(){
-        int oktaldes = Integer.parseInt(konversi, 8);
-        return oktaldes;
+    public int oktaldes(){
+        int desimal = Integer.parseInt(konversio, 8);
+        return desimal;
     }
-    public Integer oktalhex(){
-        int oktalhex = Integer.parseInt(konversi, 16);
-        return oktalhex;
+    public int oktalhex(){
+        int hexa = Integer.parseInt(konversio, 16);
+        return hexa;
     }
-    public Integer oktalbin(){
-        int oktalbin = Integer.parseInt(konversi, 2);
-        return oktalbin;
+    public int oktalbin(){
+        //int desimal = Integer.parseInt(konversio, 8);
+        //String x = String.valueOf(desimal);
+        int biner = Integer.parseUnsignedInt(konversio, 2);
+        return biner;
     }
 }

@@ -5,8 +5,10 @@ public class main {
         System.out.println(p);
     }
     public static void main(String[] args) {
-        String balik = "y";
-        while(balik.equals("y")){
+        //Tombol kembali
+        String balik="y";
+        while (balik.equals("y"))
+        {
         Scanner input = new Scanner(System.in);
         
         print("-------------------------------");
@@ -16,24 +18,25 @@ public class main {
         int pilih = input.nextInt();
         switch(pilih){
             case 1 :{
-                desimal proses = new desimal();
+                desimal prosesdes = new desimal();
                 print("masukkan angka desimal : ");
-                proses.konversi = input.nextInt();
-                print("Angka desimal -> Biner : "+proses.desbinary());
-                print("Angka desimal -> Hexa : "+proses.desoktal());
-                print("Angka desimal -> Octal : "+proses.deshexa());
+                prosesdes.konversi = input.nextInt();
+                print("Angka desimal -> Biner : "+prosesdes.desbinary());
+                print("Angka desimal -> Hexa : "+prosesdes.desoktal());
+                print("Angka desimal -> Octal : "+prosesdes.deshexa());
             } break;
             case 2 : {
+                oktal prosesokt = new oktal();
                 print("Masukkan angka oktal : ");
-                oktal proses = new oktal();
-                proses.konversi = input.nextLine();
-                print("Ankga oktal -> desimal : "+proses.oktaldes());
-                print("Ankga oktal -> hexa : "+proses.oktalhex());
-                print("Ankga oktal -> biner : "+proses.oktalbin());
+                prosesokt.konversio = input.next();
+                print("Ankga oktal -> desimal : "+prosesokt.oktaldes());
+                print("Ankga oktal -> hexa : "+prosesokt.oktalhex());
+                print("Ankga oktal -> biner : "+prosesokt.oktalbin());
             } break;
         }
-            System.out.println("Ingin mengulang ? (y/t)");
-            balik = input.nextLine();
-      }
+        System.out.println("=====================");
+            System.out.println("Ingin Mengulang ? (y/t)");
+            balik = input.next();
+        }
     }
 }
