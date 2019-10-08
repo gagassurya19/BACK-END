@@ -2,12 +2,13 @@ package tugas.tugas1;
 public class bus {
     public double penumpang;
     public double maxPenumpang;
-    public double password = 19;
+    public int password = 19;
+    public double counter;
+    public double penumpangBaru;
     public  bus(double maxpenumpang){
         this.maxPenumpang = maxpenumpang;
         penumpang = 0;
     }
-    //mutator
     public void addPenumpang(double penumpang){
         double temp;
         temp = this.penumpang+penumpang;
@@ -15,17 +16,21 @@ public class bus {
             System.out.println("Penumpang melebihi kuota!");
         } else{
             this.penumpang = temp;
+            counter++;
         }
     }
-    public void getPassword(double password){
+    public void getPenumpang(int password){
         if (password == this.password) {
             System.out.println("Password Berhasil!");
         } else{
             System.out.println("Password Salah!");
         }
     }
-    public void addAverage(){
-        
+    public double setPassword(){
+        return password;
+    }
+    public double getAverage(){
+        return penumpang/counter;
     }
     public void cetak(){       
         System.out.println("Penumpang bus sekarang : "+penumpang);
