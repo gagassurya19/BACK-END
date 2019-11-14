@@ -177,19 +177,38 @@ public class Pbo extends javax.swing.JFrame {
     private void ProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProsesActionPerformed
         // TODO add your handling code here:
         double  NT = Double.parseDouble(Tugas.getText());
+        double UH = Double.parseDouble(Uh.getText());
+        double UAS = Double.parseDouble(Uas.getText());
+        
+        //NT
         if (NT > 100) {
              JOptionPane.showMessageDialog(null, "Ubah Nilai Tugas Anda <"+Math.round(NT)+">!",
                      "Error : Nilai Tugas Melebihi 100", JOptionPane.ERROR_MESSAGE);
+             return;
+        }else if(NT<0){
+            JOptionPane.showMessageDialog(null, "Ubah Nilai Tugas Anda <"+Math.round(NT)+">!",
+                     "Error : Nilai Tugas Kurang dari 0", JOptionPane.ERROR_MESSAGE);
+            return;
         }
-        double UH = Double.parseDouble(Uh.getText());
+        //UH
         if (UH > 100) {
              JOptionPane.showMessageDialog(null, "Ubah Nilai UH Anda <"+Math.round(UH)+">!", 
                      "Error : Nilai UH Melebihi 100", JOptionPane.ERROR_MESSAGE);
+             return;
+        }else if(UH<0){
+            JOptionPane.showMessageDialog(null, "Ubah Nilai UH Anda <"+Math.round(NT)+">!",
+                     "Error : Nilai UH Kurang dari 0", JOptionPane.ERROR_MESSAGE);
+            return;
         }
-        double UAS = Double.parseDouble(Uas.getText());
+        //UAS
         if (UAS > 100) {
              JOptionPane.showMessageDialog(null, "Ubah Nilai UAS Anda <"+Math.round(UH)+">!", 
                      "Error : Nilai UAS Melebihi 100", JOptionPane.ERROR_MESSAGE);
+             return;
+        }else if(UAS<0){
+            JOptionPane.showMessageDialog(null, "Ubah Nilai UAS Anda <"+Math.round(NT)+">!",
+                     "Error : Nilai UAS Kurang dari 0", JOptionPane.ERROR_MESSAGE);
+            return;
         }
         
         //proses
