@@ -73,6 +73,11 @@ public class alertMenu extends javax.swing.JFrame {
                 ErrorMassageMouseClicked(evt);
             }
         });
+        ErrorMassage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ErrorMassageActionPerformed(evt);
+            }
+        });
 
         InformationMassage.setBackground(new java.awt.Color(255, 204, 0));
         InformationMassage.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,6 +85,11 @@ public class alertMenu extends javax.swing.JFrame {
         InformationMassage.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 InformationMassageMouseClicked(evt);
+            }
+        });
+        InformationMassage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InformationMassageActionPerformed(evt);
             }
         });
 
@@ -289,6 +299,14 @@ public class alertMenu extends javax.swing.JFrame {
             null, new String[] { "A", "B","C", "D", "E" },"A");
         System.out.println("Response: " + response);
     }//GEN-LAST:event_InputDialogMouseClicked
+
+    private void InformationMassageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InformationMassageActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InformationMassageActionPerformed
+
+    private void ErrorMassageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ErrorMassageActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ErrorMassageActionPerformed
 
     /**
      * @param args the command line arguments

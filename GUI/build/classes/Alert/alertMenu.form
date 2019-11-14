@@ -157,6 +157,7 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ErrorMassageMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ErrorMassageActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="InformationMassage">
@@ -171,6 +172,7 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="InformationMassageMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InformationMassageActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="WarningMassage">
