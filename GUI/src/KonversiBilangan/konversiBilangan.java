@@ -66,6 +66,11 @@ public class konversiBilangan extends javax.swing.JFrame {
                 ubahMouseClicked(evt);
             }
         });
+        ubah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ubahActionPerformed(evt);
+            }
+        });
 
         bin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         bin.setForeground(new java.awt.Color(255, 255, 255));
@@ -198,11 +203,19 @@ public class konversiBilangan extends javax.swing.JFrame {
 
     private void ubahMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ubahMouseClicked
         // TODO add your handling code here:
+        //mengambil data dari "desimal"
         int des = Integer.parseInt(desimal.getText());
+        //Print Out
+        //Integer.to<Bilangan>String() berfungsi mengkonversi 
+        //bilangan bulat ke bilangan yang di inginkan
         biner.setText(Integer.toBinaryString(des));
         oktal.setText(Integer.toOctalString(des));
         hexaDecimal.setText(Integer.toHexString(des));
     }//GEN-LAST:event_ubahMouseClicked
+
+    private void ubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubahActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ubahActionPerformed
 
     /**
      * @param args the command line arguments

@@ -560,9 +560,12 @@ public class geometri extends javax.swing.JFrame {
 
     private void HitungMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HitungMouseClicked
         // TODO add your handling code here:
+        //Mengambil data yang di input
         double r = Double.parseDouble(jariJari.getText());
+        //Rumusnya
         double l = Math.PI*r*r;
         double k = Math.PI*r*2;
+        //printout hasilnya
         inLuas.setText(String.valueOf(Math.round(l)));
         inKeliling.setText(String.valueOf(k));
     }//GEN-LAST:event_HitungMouseClicked
@@ -591,7 +594,8 @@ public class geometri extends javax.swing.JFrame {
         double a = Double.parseDouble(inAlasSg.getText());
         double t = Double.parseDouble(inTinggiSg.getText());
         double l = a*t/2;
-        double k = a+t+(Math.pow(a, 2)+Math.pow(t, 2));
+        double py = Math.pow(a, 2)+Math.pow(t, 2);
+        double k = a+t+(Math.sqrt(py));
         inLuasSg.setText(String.valueOf(l));
         inKelilingSg.setText(String.valueOf(k));
     }//GEN-LAST:event_HitungSgMouseClicked

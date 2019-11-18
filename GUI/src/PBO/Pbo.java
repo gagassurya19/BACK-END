@@ -175,11 +175,11 @@ public class Pbo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProsesActionPerformed
-        // TODO add your handling code here:
+        //Mengambil data Input pada textField
         double  NT = Double.parseDouble(Tugas.getText());
         double UH = Double.parseDouble(Uh.getText());
         double UAS = Double.parseDouble(Uas.getText());
-        
+        //Opsi ini untuk menampilkan pesan/alert sesuai form data yang diinput
         //NT
         if (NT > 100) {
              JOptionPane.showMessageDialog(null, "Ubah Nilai Tugas Anda <"+Math.round(NT)+">!",
@@ -210,17 +210,15 @@ public class Pbo extends javax.swing.JFrame {
                      "Error : Nilai UAS Kurang dari 0", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        
-        //proses
+        //proses perhitungan sesuai rumums
         int persen = 100;
         double TNT = (40*NT)/persen;
         double TUH = (30*UH)/persen;
         double TUAS = (30*UAS)/persen;
-        double Jumlah = TNT + TUH + TUAS;
-        
-        //Output
+        double Jumlah = TNT + TUH + TUAS; //jumlah akhir
+        //Output jumlah
         Akhir.setText(String.valueOf(Jumlah));
-        
+        //Output untuk keterangan sesuai dengan data yang di input
         if (Jumlah >= 0 && Jumlah <=55){
             Keterangan.setText("ANDA TIDAK LULUS! TINGKATKAN BELAJAR ANDA");
         } else if (Jumlah >=56 && Jumlah <=65){

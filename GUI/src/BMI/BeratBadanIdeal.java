@@ -187,11 +187,25 @@ public class BeratBadanIdeal extends javax.swing.JFrame {
 
     private void prosesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_prosesMouseClicked
         // TODO add your handling code here:
+        
+        //Mengambil data yang di input pada kolom "bb" dan "tb"
+        //setelah dipanggil data di masukkan pada variable "a" dan "t"
         double b = Double.parseDouble(bb.getText());
         double t = Double.parseDouble(tb.getText());
+        
+        //Maksud dari kode dibawah adalah mengkonversi satuan "Meter" ke "CentiMeter"
         t/=100;
-        double total = b/(Math.pow(t, 2));     
+        
+        //Ini merupakan rumus BMI
+        //Math.pow(a,b) adalah syntax yang digunakan untuk perpangkatan matematika
+        double total = b/(Math.pow(t, 2));
+        
+        //Data "total" di print ke kolom "bmi"
+        //Math.round(a) digunakan untuk membulatkan angka, "Biar ringkas :V"
         bmi.setText(String.valueOf(Math.round(total)));
+        
+        //if else untuk memunculkan keterangan sesuai data yang di input
+        //String.valueOf("a") digunakan untuk output String
         if (total < 18.5){
             ket.setText(String.valueOf("Anda Kurus !"));
         }
@@ -205,6 +219,8 @@ public class BeratBadanIdeal extends javax.swing.JFrame {
             ket.setText(String.valueOf("Anda Obesitas !"));
             ket.setText(String.valueOf("Atur Pola Makan Anda !!"));
         }
+        
+    //Oke Sekian :V Github : Gagassurya19
     }//GEN-LAST:event_prosesMouseClicked
 
     private void prosesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prosesActionPerformed

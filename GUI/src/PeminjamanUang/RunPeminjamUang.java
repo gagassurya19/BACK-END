@@ -86,6 +86,11 @@ public class RunPeminjamUang extends javax.swing.JFrame {
                 hitungMouseClicked(evt);
             }
         });
+        hitung.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hitungActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -190,15 +195,15 @@ public class RunPeminjamUang extends javax.swing.JFrame {
 
     private void hitungMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hitungMouseClicked
         // TODO add your handling code here:
-        //deklarasai
+        //Mengambil data yang diinput
         double nom = Double.parseDouble(nominal.getText());
         double bung = Double.parseDouble(bunga.getText());
         int bul = Integer.parseInt((String) bulan.getSelectedItem());
-        //proses
+        //proses sesuai rumus
         int persen = 100;
         double jumlahPersen = (nom / persen) * bung;
         double jumlah = (nom / bul) + jumlahPersen;
-        //output
+        //output 
         cicilan.setText("Rp."+String.valueOf(jumlah));
         bulat.setText("Rp. "+String.valueOf(Math.round(jumlah)));
     }//GEN-LAST:event_hitungMouseClicked
@@ -210,6 +215,10 @@ public class RunPeminjamUang extends javax.swing.JFrame {
     private void nominalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nominalMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_nominalMouseEntered
+
+    private void hitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hitungActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hitungActionPerformed
 
     /**
      * @param args the command line arguments

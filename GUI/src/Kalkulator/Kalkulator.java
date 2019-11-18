@@ -11,6 +11,7 @@ package Kalkulator;
  * @author oOo
  */
 public class Kalkulator extends javax.swing.JFrame {
+    //deklarasi variable
     String Angka;
     double Jumlah, Angka1, Angka2;
     int Pilih;
@@ -19,7 +20,7 @@ public class Kalkulator extends javax.swing.JFrame {
      */
     public Kalkulator() {
         initComponents();
-        Angka="";
+        Angka=""; //
     }
 
     /**
