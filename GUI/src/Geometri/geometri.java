@@ -563,7 +563,7 @@ public class geometri extends javax.swing.JFrame {
         double r = Double.parseDouble(jariJari.getText());
         double l = Math.PI*r*r;
         double k = Math.PI*r*2;
-        inLuas.setText(String.valueOf(l));
+        inLuas.setText(String.valueOf(Math.round(l)));
         inKeliling.setText(String.valueOf(k));
     }//GEN-LAST:event_HitungMouseClicked
 

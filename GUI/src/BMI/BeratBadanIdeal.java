@@ -70,6 +70,11 @@ public class BeratBadanIdeal extends javax.swing.JFrame {
                 prosesMouseClicked(evt);
             }
         });
+        proses.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prosesActionPerformed(evt);
+            }
+        });
 
         bmi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,7 +191,7 @@ public class BeratBadanIdeal extends javax.swing.JFrame {
         double t = Double.parseDouble(tb.getText());
         t/=100;
         double total = b/(Math.pow(t, 2));     
-        bmi.setText(String.valueOf(total));
+        bmi.setText(String.valueOf(Math.round(total)));
         if (total < 18.5){
             ket.setText(String.valueOf("Anda Kurus !"));
         }
@@ -201,6 +206,10 @@ public class BeratBadanIdeal extends javax.swing.JFrame {
             ket.setText(String.valueOf("Atur Pola Makan Anda !!"));
         }
     }//GEN-LAST:event_prosesMouseClicked
+
+    private void prosesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prosesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_prosesActionPerformed
 
     /**
      * @param args the command line arguments
