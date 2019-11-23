@@ -10,6 +10,7 @@ public class Throws2 {
     }
     public static void main(String[] args) {
         try {
+            //uji(12);
             uji(-12);
         } catch (Exception e) {
             System.out.println("Exception ditangkap disini");
