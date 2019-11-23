@@ -1,6 +1,6 @@
 package latihan; //latihan 5.1
 //Github.com/Gagassurya19
-public class ThrowingException_DataMahaSiswa { 
+public class E2_ThrowingException_DataMahaSiswa { 
         //Deklarasi variable
         private String nim;
         private String nama;

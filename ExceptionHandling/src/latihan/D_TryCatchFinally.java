@@ -1,6 +1,6 @@
-package latihan;
+package latihan; //latihan4
 //Github.com/Gagassurya19
-public class TryCatchFinally {
+public class D_TryCatchFinally {
     public static void main(String[] args) {
         int nol=0;
         int angka=10;

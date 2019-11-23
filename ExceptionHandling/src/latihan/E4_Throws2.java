@@ -1,6 +1,6 @@
 package latihan; //Latihan 5.2 [Keywords Throws]
 //Github.com/Gagassurya19
-public class Throws2 {
+public class E4_Throws2 {
     public static void uji(int angka)throws NullPointerException,ArithmeticException{
         if (angka < 0) {
             throw new NullPointerException("Kesalahan : null pointer Exception");

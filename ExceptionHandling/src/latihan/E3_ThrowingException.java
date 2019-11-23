@@ -1,6 +1,6 @@
 package latihan; //latihan 5.1 [Melempar Exception]
 //Github.com/Gagassurya19
-public class ThrowingException {
+public class E3_ThrowingException {
     public static void main(String[] args) {
         String Input = "Invalid Input";
         try {

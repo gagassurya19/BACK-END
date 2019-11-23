@@ -1,6 +1,6 @@
 package latihan; //latihan3
 //Github.com/Gagassurya19
-public class MultipleCatch {
+public class C_MultipleCatch {
     public static void main(String[] args) {
         try {
             int a = 3/0; /*
