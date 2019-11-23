@@ -24,11 +24,9 @@ public class E2_ThrowingException_DataMahaSiswa {
                 System.out.println("Kesalahan : NIM tidak boleh Kosong/Null");
             }
         }
-        
         public String getNama() {
             return nama;
         }
-
         public void setNama(String nama) {
             try {
             this.nama = nama;
@@ -39,11 +37,9 @@ public class E2_ThrowingException_DataMahaSiswa {
                 System.out.println("Kesalahan : Nama Tidak Boleh Kosong/Null");
             }   
         }
-
         public Double getNilai() {
             return nilai;
         }
-
         public void setNilai(int nilai) {
             this.nilai = nilai;
         }
