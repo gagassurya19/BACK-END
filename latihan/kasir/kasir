@@ -1,0 +1,91 @@
+kasir dengan PBO + jumlah barang variable
+
+//kasir.java
+package kasir;
+import java.util.Scanner;
+class kasir{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        hitung htg=new hitung(); 
+        System.out.println("\n ============================\n     Program Mesin Kasir\n ============================"); 
+        htg.inputBrg(); 
+        htg.tampil(); 
+        System.out.println("\n\n=============================================");
+        System.out.println("                Terima Kasih"); 
+        System.out.println("=============================================");
+        System.exit(0); 
+    }
+}
+
+//hitung.java
+package kasir;
+
+import java.util.Scanner;
+
+public class hitung {
+public String nama[]=new String[20]; 
+    public int hargaBrg[]=new int[15]; 
+    public int jumlahBrg[]=new int[15]; 
+    public int i,jumlahBeli; 
+    public double hargaTtl[]=new double[15];
+    public double totalHarga=0,diskon=0,totalBayar=0;  
+ 
+    Scanner masukkan = new Scanner(System.in); 
+    
+    public void inputBrg(){ 
+
+        System.out.print("\n Jumlah Pembelian: "); 
+        jumlahBeli = masukkan.nextInt();
+        System.out.println("\n ===================================");
+            for (int i = 0; i < jumlahBeli; i++) {
+                System.out.print("\n Nama Barang ke-"+(i+1)+"\t: "); 
+                nama[i] = masukkan.next(); 
+                System.out.print(" Jumlah Barang\t\t: "); 
+                jumlahBrg[i] = masukkan.nextInt(); 
+                System.out.print(" Harga Barang\t\t: Rp "); 
+                hargaBrg[i] = masukkan.nextInt(); 
+                
+                //proses kalkulasi
+                hargaTtl[i] = jumlahBrg[i] * hargaBrg[i]; 
+                totalHarga += hargaTtl[i];  
+            }
+           System.out.println("\n ===================================");
+           
+           //Kalkulasi Harga diskon
+           if (totalHarga >= 1000000) {
+               diskon = 0.2 * totalHarga;
+           } 
+           else if ((totalHarga >= 500000) && (totalHarga < 1000000)) {
+                diskon = 0.1 * totalHarga; 
+           }
+           else {
+               diskon = 0;
+           }
+           totalBayar = totalHarga - diskon; 
+    }
+    
+     public void tampil(){ 
+        System.out.println("\n\n                Daftar Barang Pembelian"); 
+        System.out.println(" ==========================================================="); 
+        System.out.println(" ||   Nama Barang    || Jumlah ||   Harga   ||   Total    ||"); 
+        System.out.println(" ==========================================================="); 
+        for (int k = 0; k < jumlahBeli; k++) {
+            System.out.println(String.format(" || %-16s ||  %3d   || Rp %6d || Rp %7.0f ||"
+                               ,nama[k],jumlahBrg[k],hargaBrg[k],hargaTtl[k]));
+        }            
+        System.out.println(" ===========================================================");
+        System.out.println(String.format("\n Total                                      =Rp %10.0f",totalHarga));
+        System.out.println(String.format(" Diskon                                     =Rp %10.0f",diskon)); 
+        System.out.println(String.format(" Total Pembayaran                           =Rp %10.0f",totalBayar)); 
+        
+        int uang;
+        System.out.print(" Masukkan Uang Anda                         =Rp "); uang = masukkan.nextInt();
+         if (uang < totalBayar) {
+             System.out.println(" Uang Anda Tidak Cukup");
+         } else if (uang == totalBayar){
+             System.out.println(" Uang anda pas!");
+         } else if (uang > totalBayar) {
+             System.out.println(" Kembalian                         =Rp "+(uang - totalBayar));
+         }
+    }
+}
